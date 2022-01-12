@@ -1,0 +1,20 @@
+.flight-item{
+    width: 270px;
+
+    border: 1px solid grey;
+    background-color: #cccbc8;
+    border-radius: 10px;
+}
+.flight-img{
+    width: 50%;
+}
+.btn-details{
+    margin-top: 10px;
+    outline: none;
+    border: none;
+    padding: 15px 35px 15px 35px;
+    background-color: #61dafb;
+    color: white;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
