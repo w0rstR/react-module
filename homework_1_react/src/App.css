@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+
 }
 
 .App-logo {
@@ -22,6 +23,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+
 }
 
 .App-link {
@@ -37,6 +39,10 @@
   }
 }
 .header{
-  border: 1px solid black;
+  column-gap: 10px;
   display: flex;
+  padding: 10px;
+}
+.footer{
+  padding: 10px;
 }

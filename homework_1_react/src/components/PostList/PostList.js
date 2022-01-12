@@ -10,7 +10,7 @@ export default function PostList(props){
     },[props.idUser])
     return(
         <div className={'post-container'}>
-            {postList.map(post=><Post key={post.id} title={post.title} idHendler={props.idHendler}/>)}
+            {postList.map(post=><Post key={post.id} postId={post.id} title={post.title} body={post.body} idHendler={props.idHendler}/>)}
         </div>
     )
 }
