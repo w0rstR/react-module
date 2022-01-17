@@ -1,7 +1,8 @@
 import s from './UserDetails.module.css'
 import {useEffect, useState} from "react";
-import {getUserDetails} from "../../services/services";
-export default function UserDetails({idUser,idHendler}){
+import {getUserDetails} from "../../services/service";
+
+export default function UserDetails({idUser,postHendler}){
     const [userDetails,setUserDetails] = useState(null)
 
     useEffect(()=>{
@@ -39,7 +40,7 @@ export default function UserDetails({idUser,idHendler}){
                                 <li>{userDetails.company.bs}</li>
                             </ul>
                         </div>
-                        <button onClick={()=>idHendler(idUser)} className={s.btn}>Show posts</button>
+                        <button onClick={()=>postHendler(idUser)} className={s.btn}>Show posts</button>
                     </div> : null
             }
         </div>

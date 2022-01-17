@@ -1,6 +1,6 @@
 import s from'./UserList.module.css'
 import {useEffect, useState} from "react";
-import {getUsers} from "../../services/services";
+import {getUsers} from "../../services/service";
 import User from "../User/User";
 export default function UserList({idHeandler}){
     const [users,setUsers] = useState([])
