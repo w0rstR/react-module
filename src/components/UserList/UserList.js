@@ -1,17 +1,19 @@
-import s from'./UserList.module.css'
 import {useEffect, useState} from "react";
+
 import {getUsers} from "../../services/service";
 import User from "../User/User";
-export default function UserList({idHeandler}){
-    const [users,setUsers] = useState([])
+import s from './UserList.module.css'
 
-    useEffect(()=>{
-        const response = getUsers().then(result=>setUsers(result))
-    },[])
+export default function UserList({idHeandler}) {
+    const [users, setUsers] = useState([])
 
-    return(
+    useEffect(() => {
+        const response = getUsers().then(result => setUsers(result))
+    }, [])
+
+    return (
         <div className={s.user_list}>
-            {users.map(user=><User key={user.id} item={user} idHeandler={idHeandler}/>)}
+            {users.map(user => <User key={user.id} item={user} idHeandler={idHeandler}/>)}
         </div>
     )
 }

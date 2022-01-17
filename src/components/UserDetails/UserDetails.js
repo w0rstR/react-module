@@ -1,16 +1,17 @@
-import s from './UserDetails.module.css'
 import {useEffect, useState} from "react";
+
+import s from './UserDetails.module.css'
 import {getUserDetails} from "../../services/service";
 
-export default function UserDetails({idUser,postHendler}){
-    const [userDetails,setUserDetails] = useState(null)
+export default function UserDetails({idUser, postHendler}) {
+    const [userDetails, setUserDetails] = useState(null)
 
-    useEffect(()=>{
-        const data = getUserDetails(idUser).then(result=>setUserDetails(result))
-    },[idUser])
+    useEffect(() => {
+        const data = getUserDetails(idUser).then(result => setUserDetails(result))
+    }, [idUser])
 
 
-    return(
+    return (
         <div className={s.user_details_conteiner}>
             {
                 userDetails ?
@@ -20,7 +21,7 @@ export default function UserDetails({idUser,postHendler}){
                         <div>Username: {userDetails.username}</div>
                         <div>Email: {userDetails.email}</div>
                         <div className={s.address_block}>
-                            <div>Address Block: </div>
+                            <div>Address Block:</div>
                             <ul>
                                 <li>{userDetails.address.street}</li>
                                 <li>{userDetails.address.suite}</li>
@@ -33,14 +34,14 @@ export default function UserDetails({idUser,postHendler}){
                         <div>Phone number: {userDetails.phone}</div>
                         <div>Website: {userDetails.website}</div>
                         <div className={s.company_block}>
-                            <div>Company block: </div>
+                            <div>Company block:</div>
                             <ul>
                                 <li>{userDetails.company.name}</li>
                                 <li>{userDetails.company.catchPhrase}</li>
                                 <li>{userDetails.company.bs}</li>
                             </ul>
                         </div>
-                        <button onClick={()=>postHendler(idUser)} className={s.btn}>Show posts</button>
+                        <button onClick={() => postHendler(idUser)} className={s.btn}>Show posts</button>
                     </div> : null
             }
         </div>

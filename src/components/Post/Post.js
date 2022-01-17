@@ -1,6 +1,7 @@
 import s from './Post.module.css'
-export default function Post({title,body,postId}){
-    return(
+
+export default function Post({title, body, postId}) {
+    return (
         <div>
             <ul>
                 <li className={s.item}>Post id: {postId}</li>
