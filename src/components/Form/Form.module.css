@@ -1,0 +1,17 @@
+.container{
+    padding: 10px;
+}
+.btn{
+    outline: none;
+    border: none;
+    color: white;
+    background-color: #61dafb;
+    padding: 7px 30px 7px 30px;
+    border-radius: 10px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.item{
+    font-size: 20px;
+    margin-left: 10px;
+}
