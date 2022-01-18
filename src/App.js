@@ -1,25 +1,21 @@
 
 import './App.css';
-import {Route} from "react-router-dom";
+import {Routes,Route} from "react-router-dom";
 import HomePage from "./pages/HomePage/HomePage";
 import AboutPage from "./pages/AboutPage/AboutPage";
 import PostPage from "./pages/PostPage/PostPage";
+import Header from "./components/Header/Header";
 
 function App() {
   return (
     <div className="App">
-        <div className="header">
-          <a className={'item'} href="/home">Home</a>
-          <a className={'item'} href="/about">About</a>
-          <a className={'item'} href="/post">Post</a>
-        </div>
-
         <Routes>
-            <Route path={'/home'} component={<HomePage/>}/>
-            <Route path={'/about'} component={<AboutPage/>}/>
-            <Route path={'/post'} component={<PostPage/>}/>
+            <Route path={'/'} element={<Header/>}>
+                <Route path={'/home'} element={<HomePage/>}/>
+                <Route path={'/about'} element={<AboutPage/>}/>
+                <Route path={'/post'} element={<PostPage/>}/>
+            </Route>
         </Routes>
-
     </div>
   );
 }
