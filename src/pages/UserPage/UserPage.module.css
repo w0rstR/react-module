@@ -1,0 +1,11 @@
+.container{
+    display: flex;
+}
+.userslist{
+    border: 1px solid black;
+    width: 300px;
+}
+
+.outlet{
+    width: 700px;
+}
