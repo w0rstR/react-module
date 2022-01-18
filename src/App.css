@@ -39,17 +39,3 @@
     transform: rotate(360deg);
   }
 }
-.header{
-  min-height: 70px;
-  background-color: #61dafb;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 40px;
-}
-.item{
-  text-decoration: none;
-  color: white;
-  font-size: 26px;
-  font-weight: bold;
-}
