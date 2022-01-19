@@ -2,10 +2,11 @@
     display: flex;
 }
 .userslist{
-    border: 1px solid black;
     width: 300px;
+    padding: 5px;
 }
 
 .outlet{
-    width: 700px;
+    width: 1200px;
+    padding: 5px;
 }
