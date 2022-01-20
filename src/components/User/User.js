@@ -9,6 +9,9 @@ export default function User({item}){
             <Link to={id.toString()} className={s.item} state={item}>
                 <p className={s.item}>{id}-{name}</p>
             </Link>
+            <Link>
+                <p>Show Albums</p>
+            </Link>
         </div>
     )
 }
