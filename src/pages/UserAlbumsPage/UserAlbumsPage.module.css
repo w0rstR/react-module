@@ -1,0 +1,22 @@
+.container{
+    background-color: darkslategrey;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.item{
+    color: white;
+    font-size: 36px;
+}
+.wrap{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+.link{
+    color: white;
+    font-size: 28px;
+}

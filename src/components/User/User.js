@@ -8,9 +8,9 @@ export default function User({item}){
         <div className={s.container}>
             <Link to={id.toString()} className={s.item} state={item}>
                 <p className={s.item}>{id}-{name}</p>
-            </Link>
-            <Link>
-                <p>Show Albums</p>
+                <Link to={`${id.toString()}/albums`}>
+                    <p>Show Albums</p>
+                </Link>
             </Link>
         </div>
     )
