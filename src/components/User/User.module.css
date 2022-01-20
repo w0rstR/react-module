@@ -1,7 +1,6 @@
 .item{
-    padding: 10px;
     color: white;
-
+    font-size: 22px;
 }
 .container{
     display: flex;

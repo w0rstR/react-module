@@ -1,7 +1,8 @@
 import {useEffect, useState} from "react";
-import {userService} from "../../service/user.service";
 import {Link, Outlet, useLocation, useParams} from "react-router-dom";
+
 import s from './UserDetailsPage.module.css'
+import {userService} from "../../service/user.service";
 
 export default function UserDetailsPage(){
     const {id}=useParams();

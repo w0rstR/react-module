@@ -1,3 +1,10 @@
 .container{
     display: flex;
+    padding:5px;
+    column-gap: 20px;
+}
+.posts{
+    background-color: dimgrey;
+    width: 800px;
+    padding-top: 5px;
 }

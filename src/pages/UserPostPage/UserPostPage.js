@@ -1,9 +1,9 @@
 import {useEffect, useState} from "react";
 import {useLocation} from "react-router-dom";
-import {userService} from "../../service/user.service";
-import Post from "../../components/Post/Post";
 
+import {userService} from "../../service/user.service";
 import s from './UserPostPage.module.css'
+import Post from "../../components/Post/Post";
 
 export  default function UserPostPage(){
     const {state} = useLocation()

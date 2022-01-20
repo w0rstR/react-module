@@ -1,0 +1,10 @@
+.item{
+    padding: 5px;
+    border: none;
+    outline: none;
+}
+.link{
+    color: white;
+    outline: none;
+    font-size: 24px;
+}

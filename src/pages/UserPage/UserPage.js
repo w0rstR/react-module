@@ -1,9 +1,9 @@
-
-import s from './UserPage.module.css'
 import {Outlet} from "react-router-dom";
 import {useEffect, useState} from "react";
+
 import {userService} from "../../service/user.service";
 import User from "../../components/User/User";
+import s from './UserPage.module.css'
 
 export default function UserPage(){
     const [userList, setUserList] = useState([])

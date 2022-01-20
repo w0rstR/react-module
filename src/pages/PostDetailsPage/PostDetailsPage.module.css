@@ -1,0 +1,15 @@
+.container{
+    background-color: darkgray;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.wrap{
+    padding-right: 5px;
+}
+.block{
+    width: 1000px;
+}

@@ -1,7 +1,8 @@
 import {Link, Outlet, useLocation, useParams} from "react-router-dom";
 import {useEffect, useState} from "react";
+
 import {postService} from "../../service/post.service";
-import s from "../UserDetailsPage/UserDetailsPage.module.css";
+import s from './PostDetailsPage.module.css'
 
 export default function PostDetailsPage(){
     const {id} = useParams();
@@ -16,15 +17,19 @@ export default function PostDetailsPage(){
         postService.getById(id).then(value => setPostDetails(value))
     },[id])
     return(
-        <div>
+        <div className={s.block}>
             {postDetails ?
-            <div>
-               <div>{postDetails.id}</div>
-                <div>{postDetails.title}</div>
-                <div>{postDetails.body}</div>
-                <Link  to={'comments'} state={id}>Go to comments</Link>
-                <Outlet/>
-            </div> : null}
+                <div className={s.wrap}>
+                    <div className={s.container}>
+                        <div>Post id: {postDetails.id}</div>
+                        <div>Title: {postDetails.title}</div>
+                        <div>Body: {postDetails.body}</div>
+                        <Link  to={'comments'} state={id}>Go to comments</Link>
+                    </div>
+                    <div>
+                        <Outlet/>
+                    </div>
+                </div> : null}
         </div>
     )
 }

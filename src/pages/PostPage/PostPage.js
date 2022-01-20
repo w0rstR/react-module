@@ -1,9 +1,9 @@
 import {useEffect, useState} from "react";
-import {postService} from "../../service/post.service";
-import PostItem from "../../components/PostItem/PostItem";
 import {Outlet} from "react-router-dom";
 
 import s from './PostPage.module.css'
+import PostItem from "../../components/PostItem/PostItem";
+import {postService} from "../../service/post.service";
 
 export default function PostPage(){
     const [postList, setPostList] = useState([])
@@ -13,7 +13,7 @@ export default function PostPage(){
     },[])
     return(
         <div className={s.container}>
-            <div>
+            <div className={s.posts}>
                 {postList.map(post=><PostItem key={post.id} item={post}/>)}
             </div>
             <div>

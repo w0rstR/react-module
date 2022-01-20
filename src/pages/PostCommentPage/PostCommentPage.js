@@ -2,6 +2,7 @@ import {useLocation} from "react-router-dom";
 import {useEffect, useState} from "react";
 import {postService} from "../../service/post.service";
 import Comments from "../../components/Comments/Comments";
+import s from './PostCommentPage.module.css'
 
 export default function PostCommentPage(){
     const {state} = useLocation();
@@ -12,7 +13,7 @@ export default function PostCommentPage(){
         postService.getCommentById(state).then(value => setCommentsList(value))
     },[state])
     return(
-        <div>
+        <div className={s.container}>
             { commentsList && commentsList.map(comment=><Comments key={comment.id} item={comment}/>)}
         </div>
     )
