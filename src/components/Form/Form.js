@@ -1,21 +1,23 @@
 import {useState} from "react";
 import {useForm} from "react-hook-form";
 
-export default function Form({onSubmit}){
+import s from './Form.module.css'
 
-    const {register,handleSubmit,watch,formState:{errors}} = useForm()
+export default function Form({onSubmit}) {
 
-    const submit=(data)=>{
+    const {register, handleSubmit, watch, formState: {errors}} = useForm()
+
+    const submit = (data) => {
         onSubmit(data)
     }
 
-    return(
-        <div>
+    return (
+        <div className={s.container}>
             <form onSubmit={handleSubmit(submit)}>
                 <div><label>Model: <input type="text" {...register('model')}/></label></div>
                 <div><label>Price: <input type="text"  {...register('price')}/></label></div>
                 <div><label>Year: <input type="text"  {...register('year')}/></label></div>
-                <button>Create a new car</button>
+                <button className={s.btn}>Create a new car</button>
             </form>
         </div>
     )

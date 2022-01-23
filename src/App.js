@@ -1,28 +1,32 @@
-
 import './App.css';
 import CarList from "./components/CarList/CarList";
 import Form from "./components/Form/Form";
-import {useState} from "react";
 import {carService} from "./service/car.service";
-import {set} from "react-hook-form";
+
+import {useState} from "react";
 
 function App() {
-    const[car,setCar] = useState({})
+    const [car, setCar] = useState({})
 
-    const onSubmit=(data)=>{
-        carService.createCar(data).then(value =>setCar(value))
+
+    const onSubmit = (data) => {
+        carService.createCar(data).then(value => setCar(value))
     }
 
-    const deleteCar=(id)=>{
+    const deleteCar = (id) => {
         carService.deleteById(id).then(value => setCar(value))
     }
 
-  return (
-    <div>
-        <Form onSubmit={onSubmit}/>
-        <CarList car={car} deleteCar={deleteCar} />
-    </div>
-  );
+    const updateCar = (id, car) => {
+        carService.updateById(id, car).then(value => setCar(value))
+    }
+
+    return (
+        <div className={'container'}>
+            <Form onSubmit={onSubmit}/>
+            <CarList car={car} deleteCar={deleteCar} updateCar={updateCar}/>
+        </div>
+    );
 }
 
 export default App;
