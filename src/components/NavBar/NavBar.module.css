@@ -1,0 +1,18 @@
+.container {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.btn {
+    width: 50px;
+    border: none;
+    outline: none;
+    padding: 10px;
+    cursor: pointer;
+    background-color: #282c34;
+    color: white;
+    font-size: 18px;
+    margin-top: 10px;
+}

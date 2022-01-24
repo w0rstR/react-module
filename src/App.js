@@ -1,22 +1,28 @@
-
 import './App.css';
 import NavBar from "./components/NavBar/NavBar";
 import Photo from "./components/Photo/Photo";
-import {useEffect} from "react";
-import {imgService} from "./services/img.service";
+
+import {useEffect, useState} from "react";
+
 
 function App() {
+    const [tag, setTag] = useState('girl')
 
-  useEffect(()=>{
-      imgService.getImg().then(value => console.log(value))
-  },[])
+    const triggerTag = (t) => {
+        setTag(t)
+        console.log(t)
+    }
 
-  return (
-    <div>
-        <NavBar/>
-        <Photo/>
-    </div>
-  );
+    const triggerUpdate = (ta) => {
+        setTag(ta)
+        console.log(ta)
+    }
+    return (
+        <div className={'container'}>
+            <NavBar trigger={triggerTag}/>
+            <Photo tag={tag} triggerUpdate={triggerUpdate}/>
+        </div>
+    );
 }
 
 export default App;
