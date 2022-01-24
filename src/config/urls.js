@@ -2,7 +2,7 @@ const baseURL='https://rickandmortyapi.com/api'
 
 
 export const urls={
-    characters:'/characters',
+    characters:'/character',
     locations:'/locations',
     episodes:'/episode'
 }
