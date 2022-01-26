@@ -2,18 +2,28 @@ import {useEffect, useState} from "react";
 import {episodeService} from "../services/episode.service";
 import Episode from "../components/Episode/Episode";
 import s from './EpisodePage.module.css'
-import {Outlet} from "react-router-dom";
+import {Link, Outlet, useParams} from "react-router-dom";
+import NavigationButton from "../components/NavigationButton/NavigationButton";
 
-export default function EpisodePage(){
+export default function EpisodePage({episodes}){
     const [episodeList,setEpisodeList] = useState([])
+    const [page,setPage] = useState()
 
-    useEffect(()=>{
-        episodeService.getAll().then(value => setEpisodeList(value.results))
-    },[])
+    const {id} = useParams();
+
+    useEffect(async ()=>{
+        const res = await episodeService.getById(id).then(value=>{
+            setEpisodeList(value.results)
+
+        })
+    },[id])
 
     return(
-        <div className={s.container}>
-            {episodeList ? episodeList.map(episode=><Episode key={episode.id} item={episode}/>) : null}
+        <div>
+            <div className={s.container}>
+                {episodeList ? episodeList.map(episode=><Episode key={episode.id} item={episode}/>) : null}
+            </div>
+            <NavigationButton id={id}/>
         </div>
     )
 }

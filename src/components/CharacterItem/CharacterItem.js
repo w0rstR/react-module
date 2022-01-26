@@ -4,12 +4,11 @@ export default function CharacterItem({item}){
     const [items,setItems]=useState()
     useEffect(()=>{
         setItems(item)
-        console.log(items)
     },[])
     return(
         <div>
             <div>
-                <div>Id: }</div>
+                <div>Id:</div>
                 <div>Name: </div>
                 <div>Status: </div>
                 <div>

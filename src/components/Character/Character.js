@@ -1,15 +1,19 @@
 import {useEffect, useState} from "react";
-import {charactersService} from "../../services/characters.service";
-import CharacterItem from "../CharacterItem/CharacterItem";
+import s from './Character.module.css'
 
 export default function Character({item}){
     const [characterList,setCharacterList] = useState()
-    useEffect(()=>{
-        charactersService.getCharacters(item).then(value => setCharacterList(value.results))
-    },[item])
+
+    const {id,name,species,gender,image}=item
     return(
-        <div>
-            {characterList ? characterList.map(character=><CharacterItem key={character.id} item={character}/>) : null}
+        <div className={s.container}>
+            <div className={s.item}>Id: {id}</div>
+            <div className={s.item}>Name: {name}</div>
+            <div className={s.item}>Species: {species}</div>
+            <div className={s.item}>Gender: {gender}</div>
+            <div>
+                <img className={s.image} src={image} alt="Image"/>
+            </div>
         </div>
     )
 }

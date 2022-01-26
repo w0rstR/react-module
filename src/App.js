@@ -1,6 +1,6 @@
 
 import './App.css';
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
 
 import {episodeService} from "./services/episode.service";
 import {Route,Routes} from "react-router-dom";
@@ -9,16 +9,14 @@ import EpisodePage from "./pages/EpisodePage";
 import EpisodeDetailsPage from "./pages/EpisodeDetailsPage/EpisodeDetailsPage";
 
 function App() {
-  useEffect(()=>{
-    episodeService.getAll().then(value => console.log(value.results))
-  })
+
   return (
 
     <div>
         <Routes>
           <Route path={'/'} element={<Layout/>}>
-                <Route path={'episode'} element={<EpisodePage/>}/>
-                <Route path={'episode/details/:id'} element={<EpisodeDetailsPage/>}/>
+                <Route path={'episode/:id'} element={<EpisodePage/>}/>
+                <Route path={'episode/:id/details/:detailsId'} element={<EpisodeDetailsPage/>}/>
           </Route>
         </Routes>
     </div>
