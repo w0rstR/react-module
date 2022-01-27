@@ -1,0 +1,13 @@
+.container{
+    margin-top: 10px;
+    display: flex;
+    gap: 20px;
+}
+.item{
+    color: white;
+}
+.wrap{
+    background-color: #282c34;
+    border-radius: 10px;
+    padding: 0px 10px 0px 10px;
+}

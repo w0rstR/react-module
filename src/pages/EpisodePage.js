@@ -14,7 +14,7 @@ export default function EpisodePage({episodes}){
     useEffect(async ()=>{
         const res = await episodeService.getById(id).then(value=>{
             setEpisodeList(value.results)
-
+            console.log(value)
         })
     },[id])
 
@@ -23,7 +23,9 @@ export default function EpisodePage({episodes}){
             <div className={s.container}>
                 {episodeList ? episodeList.map(episode=><Episode key={episode.id} item={episode}/>) : null}
             </div>
-            <NavigationButton id={id}/>
+            <div className={s.wrap}>
+                <NavigationButton id={id}/>
+            </div>
         </div>
     )
 }
