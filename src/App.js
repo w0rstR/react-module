@@ -1,11 +1,9 @@
 
 import './App.css';
-import {useEffect, useState} from "react";
-
-import {episodeService} from "./services/episode.service";
 import {Route,Routes} from "react-router-dom";
+
 import Layout from "./components/Layout/Layout";
-import EpisodePage from "./pages/EpisodePage";
+import EpisodePage from "./pages/EpisodePage/EpisodePage";
 import EpisodeDetailsPage from "./pages/EpisodeDetailsPage/EpisodeDetailsPage";
 
 function App() {

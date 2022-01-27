@@ -1,11 +1,10 @@
 import {useEffect, useState} from "react";
+
 import s from './Character.module.css'
 
-export default function Character({item}){
-    const [characterList,setCharacterList] = useState()
-
-    const {id,name,species,gender,image}=item
-    return(
+export default function Character({item}) {
+    const {id, name, species, gender, image} = item
+    return (
         <div className={s.container}>
             <div className={s.item}>Id: {id}</div>
             <div className={s.item}>Name: {name}</div>

@@ -1,8 +1,10 @@
 import s from './Episode.module.css'
+
 import {Link} from "react-router-dom";
-export default function Episode({item}){
-    const {id,name,air_date,episode,characters} = item
-    return(
+
+export default function Episode({item}) {
+    const {id, name, air_date, episode, characters} = item
+    return (
         <div className={s.wrap}>
             <div className={s.container}>
                 <div>Id: {id}</div>
