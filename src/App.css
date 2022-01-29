@@ -39,3 +39,20 @@
     transform: rotate(360deg);
   }
 }
+.listContainer{
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+.wrap{
+  display: flex;
+  gap: 20px;
+}
+.main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #282c34;
+}

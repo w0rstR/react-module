@@ -1,0 +1,10 @@
+.container{
+    padding: 10px;
+    border: 1px solid grey;
+    width: 250px;
+}
+.item{
+    text-align: center;
+    color: white;
+    font-size: 24px;
+}
