@@ -1,11 +1,7 @@
-.form{
-    display: flex;
-    justify-content: center;
-    gap: 5px;
-}
 .container{
-    width: 300px;
-
+    display: flex;
+    justify-content: space-between;
+    padding-top: 5px;
 }
 .btn{
     outline: none;
@@ -14,8 +10,5 @@
     background-color: darkslategrey;
     border-radius: 5px;
     cursor: pointer;
-    color: white;
-}
-.item{
     color: white;
 }

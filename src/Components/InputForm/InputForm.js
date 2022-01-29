@@ -1,15 +1,19 @@
-import {useForm} from "react-hook-form";
-import s from './InputForm.module.css'
+import {useForm} from 'react-hook-form'
 
-export default function InputForm({name,add}){
+import s from './InputForm.module.css';
+
+export default function InputForm({name, add}) {
     const {register, handleSubmit, watch, formState: {errors}} = useForm()
 
-    const submit=(data)=>{
-        add(data[name])
+    const submit = (data) => {
+        if (data[name]) {
+            add(data[name])
+        }
     }
-    return(
-        <div>
-            <form  onSubmit={handleSubmit(submit)} className={s.form}>
+
+    return (
+        <div className={s.container}>
+            <form onSubmit={handleSubmit(submit)} className={s.form}>
                 <div><label className={s.item}>{name} <input type='text' {...register(`${name}`)}/></label></div>
                 <button className={s.btn}>Add</button>
             </form>
