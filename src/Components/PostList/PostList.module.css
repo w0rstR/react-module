@@ -1,0 +1,15 @@
+.container{
+    height: 517px;
+    background-color: #2c3961;
+}
+.wrap{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 520px;
+    width: 1250px;
+    border: 1px solid black;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}

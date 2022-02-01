@@ -1,9 +1,9 @@
-import s from './UserPage.module.css'
+import UserList from '../../Components/UserList/UserList';
 
-export default function UserPage(){
-    return(
+export default function UserPage() {
+    return (
         <div>
-
+            <UserList/>
         </div>
     )
 }
