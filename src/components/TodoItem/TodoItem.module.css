@@ -1,0 +1,35 @@
+.container{
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+    width: 200px;
+    border: 3px solid grey;
+    background-color: darkslategrey;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+}
+.btn{
+    outline: none;
+    border: none;
+    background-color: #61dafb;
+    padding: 5px 15px 5px 15px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+.wrap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.line{
+    text-decoration: line-through;
+    list-style-type: none;
+    font-size: 20px;
+}
+.todo{
+    list-style-type: none;
+    font-size: 20px;
+}

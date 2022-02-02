@@ -1,0 +1,15 @@
+.container{
+    height: 527px;
+    background-color: lightslategray;
+}
+
+.wrap{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+.header{
+    margin: 0;
+    padding-top: 5px;
+}

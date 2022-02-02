@@ -1,11 +1,13 @@
-import logo from './logo.svg';
 import './App.css';
+import Form from "./components/Form/Form";
+import TodoList from "./components/TodoList/TodoList";
 
 function App() {
   return (
 
-    <div className="App">
-
+    <div>
+      <Form/>
+      <TodoList/>
     </div>
   );
 }

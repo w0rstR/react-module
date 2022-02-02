@@ -1,0 +1,21 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #282c34;
+    height: 70px;
+}
+
+.wrap{
+    display: flex;
+    gap: 10px;
+}
+.btn{
+    outline: none;
+    border: none;
+    background-color: #61dafb;
+    padding: 0px 10px 0px 10px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
