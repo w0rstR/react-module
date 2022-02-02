@@ -1,5 +1,6 @@
-import {configureStore} from "@reduxjs/toolkit";
-import {todoListReducer} from "./todolist.conf";
+import {configureStore} from '@reduxjs/toolkit';
+
+import {todoListReducer} from './todolist.conf';
 
 
 const store = configureStore({

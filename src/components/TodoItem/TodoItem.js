@@ -1,26 +1,28 @@
-import  s from './TodoItem.module.css'
-import {useDispatch} from "react-redux";
-import {deleteTodo, setStatus} from "../store/todolist.conf";
+import {useDispatch} from 'react-redux';
 
-export default function TodoItem({item}){
+import {deleteTodo, setStatus} from '../store/todolist.conf';
+import s from './TodoItem.module.css'
+
+export default function TodoItem({item}) {
 
     const dispatch = useDispatch()
-    const {todo,id,status} = item;
+    const {todo, id, status} = item;
 
-    const chaked = ()=>{
+    const checked = () => {
         dispatch(setStatus({id}))
     }
 
-    return(
+    return (
         <div className={s.container}>
             <div className={s.wrap}>
                 <div>
-                    <input defaultChecked={status} type="checkbox" id="scales" name="scales" onChange={()=>chaked()}/>
+                    <input defaultChecked={status} type='checkbox' id='scales' name='scales'
+                           onChange={() => checked()}/>
                 </div>
                 <li className={status ? s.line : s.todo}>{todo}</li>
             </div>
             <div>
-                <button className={s.btn} onClick={()=>dispatch(deleteTodo({id}))}>delete</button>
+                <button className={s.btn} onClick={() => dispatch(deleteTodo({id}))}>delete</button>
             </div>
         </div>
     )
