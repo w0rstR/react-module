@@ -1,4 +1,4 @@
-interface IUser{
+interface IUser {
     name:string,
     age:number,
     gender:string
@@ -7,7 +7,7 @@ interface IUser{
 const user = {
     name:"Max",
     age:18,
-    gender:'male'
+    gender:"male"
 }
 
 function sum(a:number,b:number):number{
@@ -24,3 +24,8 @@ function incAge(someUser:IUser,inc:number):IUser{
 }
 
 console.log(sum(2,4))
+
+showSum(10,5)
+const newObj=incAge(user,10)
+
+console.log(newObj)
