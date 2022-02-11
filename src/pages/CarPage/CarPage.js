@@ -8,7 +8,7 @@ export default function CarsPage() {
             <div className={s.form}>
                 <Form/>
             </div>
-            <div className={s.form}>
+            <div className={s.cars}>
                 <Cars/>
             </div>
         </div>

@@ -1,8 +1,10 @@
+
+
 .container{
     display: flex;
     border: 1px solid grey;
-    padding: 15px;
-    width: 230px;
+    padding: 20px;
+    width: 240px;
     flex-direction: column;
     height: 120px;
     justify-content: space-between;

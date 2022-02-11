@@ -7,7 +7,7 @@ export default function Layout() {
         <div>
             <div className={s.container}>
                 <div><Link to={'cars'}><p className={s.item}>To Cars</p></Link></div>
-                <div><Link to={'users'}><p className={s.item}>To Cars</p></Link></div>
+                <div><Link to={'users'}><p className={s.item}>To Users</p></Link></div>
             </div>
             <Outlet/>
         </div>
